@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        // const fff = async() => {
+        //     try{
+        //         const fetch = await fetch('http://127.0.0.1:8000/new/simple/')
+        //         const fe1 = await Response.json()
+        //         console.log(fe1);
+        //     }catch(error){
+        //         console.log(error);
+        //     }
+        // }
+            
+
+     let some =  fetch('http://127.0.0.1:8000/new/simple/')
+        .then( (res) => {
+            if (!res.ok) {
+                throw Error('why me')
+            }
+            return res.json();
+        })
+        .then( (data) => {
+            // console.log(data);
+            return data
+        })
+
+        // console.log(data);
+        console.log(some);
+        
+    </script>
+    
+</body>
+</html>
